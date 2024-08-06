@@ -1,0 +1,3 @@
+.Renviron
+*.sqlite
+build.log
