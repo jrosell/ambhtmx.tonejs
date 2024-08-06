@@ -46,6 +46,7 @@ git init
 git add -A
 git status
 git commit -m "My changes"
+git branch -M main
 git remote add origin git@github.com:jrosell/ambhtmx.tonejs.git
 git remote add gh git@github.com:jrosell/ambhtmx.tonejs.git
 git remote add hf git@hf.co:spaces/jrosell/ambhtmx.tonejs
