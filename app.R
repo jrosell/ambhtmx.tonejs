@@ -33,12 +33,12 @@ amb_tonejs <- \(
      collapse = ""
   )
   div(
-    class = paste0("amb_tonejs ", id),
-    style = "margin : 10px; float: left;",    
-    button(id = id, button_text),         
-    script(HTML(script_chr)),    
-    a("x", style = "color: red; text-decoration: none", href = "/", hx_delete="/delete", hx_confirm = glue('Are you sure you want to delete "{button_text}"?'), hx_swap = "outerHTML", hx_target = glue(".{id}"))
-  )
+      class = paste0("amb_tonejs ", id),
+      style = "margin : 10px; float: left;",    
+      button(id = id, button_text),         
+      script(HTML(script_chr)),    
+      a("x", style = "color: red; text-decoration: none", href = "#", hx_delete="/delete", hx_confirm = glue('Are you sure you want to delete "{button_text}"?'), hx_swap = "outerHTML", hx_target = glue(".{id}"))
+    )
 }
 
 #' Starting the app and defining the routes

@@ -58,9 +58,10 @@ RUN install2.r --error -s --deps TRUE htmltools tibble dplyr purrr rlang glue th
 RUN Rscript -e "install.packages('b64', repos = c('https://extendr.r-universe.dev', getOption('repos')))" 
 RUN Rscript -e "install.packages('uwu', repos = c('https://josiahparry.r-universe.dev', getOption('repos')))" 
 RUN --mount=type=secret,id=GITHUB_PAT GITHUB_PAT=$(cat /run/secrets/GITHUB_PAT) \
-    installGithub.r devOpifex/ambiorix devOpifex/scilis devOpifex/signaculum
-RUN --mount=type=secret,id=GITHUB_PAT GITHUB_PAT=$(cat /run/secrets/GITHUB_PAT) \
     installGithub.r jrosell/ambhtmx
+RUN --mount=type=secret,id=GITHUB_PAT GITHUB_PAT=$(cat /run/secrets/GITHUB_PAT) \
+    installGithub.r devOpifex/ambiorix devOpifex/scilis devOpifex/signaculum
+
 
 # Prepare the user
 ENV HOME=/workspace \
